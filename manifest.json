@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+	"name": "NotionMD",
+	"version": "0.1.0",
+	"description": "Notion To Markdown, Then Share WeiXin.",
+    "background": {
+        "service_worker": "js/bg.js"
+    },
+    "permissions": ["storage", "contextMenus", "notifications"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "img/icon.png",
+            "32": "img/icon.png",
+            "48": "img/icon.png",
+            "128": "img/icon.png"
+        }
+    },
+    "icons": {
+        "16": "img/icon.png",
+        "32": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    }
+	
+}
