@@ -34,6 +34,6 @@ function initData() {
   }, function(res) {
     let data = res.data
     tokenInput.value = data.token
-    editor.editor = data.editor
+    editorInput.value = data.editor
   });
 }
