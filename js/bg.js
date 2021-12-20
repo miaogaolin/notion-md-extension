@@ -24,7 +24,7 @@ function ToEditor(info, tab) {
             return
         }
     
-        let id = pageUrl.match(/([A-Za-z0-9]+$)/)[1]
+        let id = pageUrl.match(/([A-Za-z0-9]{32})/)[1]
         let reqUrl = data.editor + "?ref=notion&auth="+data.token+"&page_id="+id;
         chrome.tabs.create({ url: reqUrl });
     });
