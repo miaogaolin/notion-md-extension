@@ -24,7 +24,15 @@ function ToEditor(info, tab) {
             return
         }
     
-        let id = pageUrl.match(/([A-Za-z0-9]{32})/)[1]
+        let ids = pageUrl.match(/[A-Za-z0-9]{32}/g)
+        if (ids.length < 1) {
+            alert("URL Error")
+            return
+        }
+        id = ids[0]
+        if (pageUrl.indexOf("?p=") != -1){
+            id = ids[1]
+        }
         let reqUrl = data.editor + "?ref=notion&auth="+data.token+"&page_id="+id;
         chrome.tabs.create({ url: reqUrl });
     });
